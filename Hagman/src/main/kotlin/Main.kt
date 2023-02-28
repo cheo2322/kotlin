@@ -17,7 +17,15 @@ fun setupGame() {
 
     println(word)
 
+    for (i in word.indices) {
+        guesses.add('_')
+    }
+
     printGameStatus()
+
+    println("Please enter a letter:")
+
+
 }
 
 fun printGameStatus() {
@@ -30,6 +38,13 @@ fun printGameStatus() {
         5 -> print5Mistakes()
         6 -> print6Mistakes()
     }
+
+    print("Word: ")
+    for (element in guesses) {
+        print("$element ")
+    }
+
+    println("\nYou have $remainGuesses guess(es) left")
 }
 
 fun print0Mistakes() {
