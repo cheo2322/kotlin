@@ -55,6 +55,13 @@ fun setupGame() {
             }
         }
     } while (!gameOver)
+
+    if (mistakes == 6) {
+        printGameStatus()
+        println("Sorry! You lost. The word was ${word.uppercase()}")
+    } else {
+        println("Congratulations! You win. The word was ${word.uppercase()}")
+    }
 }
 
 fun printGameStatus() {
