@@ -1,11 +1,10 @@
-import java.util.*
 import kotlin.random.Random
 
 val words = listOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
 var word = ""
 val guesses = arrayListOf<Char>()
-val remainGuesses = 6
-val mistakes = 0
+var remainGuesses = 6
+var mistakes = 0
 
 fun main(args: Array<String>) {
     setupGame()
@@ -13,7 +12,7 @@ fun main(args: Array<String>) {
 
 fun setupGame() {
     val wordIndex = Random.nextInt(words.size)
-    word = words[wordIndex].uppercase(Locale.getDefault())
+    word = words[wordIndex].uppercase()
 
     println(word)
 
@@ -21,11 +20,41 @@ fun setupGame() {
         guesses.add('_')
     }
 
-    printGameStatus()
+    var gameOver = false
 
-    println("Please enter a letter:")
+    do {
+        printGameStatus()
+        println("Please enter a letter:")
 
+        val input = readLine() ?: ""
 
+        if (input.isEmpty()) {
+            println("That's not a valid input. Please try again!")
+        } else {
+            val letter = input[0].uppercaseChar()
+
+            if (word.contains(letter)) {
+                for (i in word.indices) {
+                    if (word[i] == letter) {
+                        guesses[i] = letter
+                    }
+                }
+
+                if (!guesses.contains('_')) {
+                    gameOver = true
+                }
+            } else {
+                println("Sorry! That's not part of the word")
+
+                remainGuesses--
+                mistakes++
+
+                if (mistakes == 6) {
+                    gameOver = true
+                }
+            }
+        }
+    } while (!gameOver)
 }
 
 fun printGameStatus() {
