@@ -1,32 +1,35 @@
 import kotlin.random.Random
 
-val words = listOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
-var word = ""
-val guesses = arrayListOf<Char>()
-var remainGuesses = 6
-var mistakes = 0
+fun main() {
+    val words =
+        listOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
 
-fun main(args: Array<String>) {
-    setupGame()
+    playGame(setupWord(words))
 }
 
-fun setupGame() {
+fun setupWord(words: List<String>): String {
     val wordIndex = Random.nextInt(words.size)
-    word = words[wordIndex].uppercase()
+    val word = words[wordIndex].uppercase()
 
     println(word)
+    return word
+}
+
+fun playGame(word: String) {
+    var gameOver = false
+    var remainGuesses = 6
+    var mistakes = 0
+    val guesses = arrayListOf<Char>()
 
     for (i in word.indices) {
         guesses.add('_')
     }
 
-    var gameOver = false
-
     do {
-        printGameStatus()
+        printGameStatus(mistakes, remainGuesses, guesses)
         println("Please enter a letter:")
 
-        val input = readLine() ?: ""
+        val input = readlnOrNull() ?: ""
 
         if (input.isEmpty()) {
             println("That's not a valid input. Please try again!")
@@ -42,6 +45,8 @@ fun setupGame() {
 
                 if (!guesses.contains('_')) {
                     gameOver = true
+
+                    println("Congratulations! You win. The word was ${word.uppercase()}")
                 }
             } else {
                 println("Sorry! That's not part of the word")
@@ -51,20 +56,16 @@ fun setupGame() {
 
                 if (mistakes == 6) {
                     gameOver = true
+
+                    printGameStatus(mistakes, remainGuesses, guesses)
+                    println("Sorry! You lost. The word was ${word.uppercase()}")
                 }
             }
         }
     } while (!gameOver)
-
-    if (mistakes == 6) {
-        printGameStatus()
-        println("Sorry! You lost. The word was ${word.uppercase()}")
-    } else {
-        println("Congratulations! You win. The word was ${word.uppercase()}")
-    }
 }
 
-fun printGameStatus() {
+fun printGameStatus(mistakes: Int, remainGuesses: Int, guesses: ArrayList<Char>) {
     when (mistakes) {
         0 -> print0Mistakes()
         1 -> print1Mistake()
