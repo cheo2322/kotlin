@@ -44,6 +44,12 @@ fun main() {
 
                     continueGame = false
                 }
+
+                val boardFull = checkBoardFull()
+                if (!playerWon && boardFull) {
+                    println("It's a tie!")
+                    continueGame = false
+                }
             }
 
         } catch (e: Exception) {
@@ -96,4 +102,18 @@ fun checkWinner(player: Boolean): Boolean {
     }
 
     return won
+}
+
+fun checkBoardFull(): Boolean {
+    var boardFull = true
+    for (i in 0..2) {
+        for (j in 0..2) {
+            if (board[i][j] == "") {
+                boardFull = false
+                break
+            }
+        }
+    }
+
+    return boardFull
 }
