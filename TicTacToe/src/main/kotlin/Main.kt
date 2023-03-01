@@ -1,7 +1,31 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+var board = arrayListOf<ArrayList<String>>()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    for (i in 0..2) {
+        val row = arrayListOf<String>()
+
+        for (j in 0..2) {
+            row.add("")
+        }
+
+        board.add(row)
+    }
+
+    printBoard()
+}
+
+fun printBoard() {
+    println("-------------")
+    for (i in 0..2) {
+        for (j in 0..2) {
+            when (board[i][j]) {
+                "X" -> print("| X ")
+                "O" -> print("| O ")
+                else -> print("|   ")
+            }
+        }
+
+        println("|")
+        println("-------------")
+    }
 }
