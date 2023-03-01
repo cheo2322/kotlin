@@ -20,8 +20,8 @@ fun main() {
         println("Please, enter a position (e.g. 1,1)")
 
         val input = readlnOrNull() ?: ""
-        var x = 0
-        var y = 0
+        var x: Int
+        var y: Int
 
         try {
             val positions = input.split(",")
@@ -131,8 +131,8 @@ fun checkBoardFull(): Boolean {
 }
 
 fun placeComputerMove() {
-    var i = 0
-    var j = 0
+    var i: Int
+    var j: Int
 
     do {
         i = Random.nextInt(3)
