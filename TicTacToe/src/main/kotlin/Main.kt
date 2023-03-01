@@ -12,6 +12,32 @@ fun main() {
     }
 
     printBoard()
+
+    var continueGame = true
+
+    do {
+        println("Please, enter a position (e.g. 1,1)")
+
+        val input = readlnOrNull() ?: ""
+        var x = 0
+        var y = 0
+
+        try {
+            val positions = input.split(",")
+            x = positions[0].trim().toInt()
+            y = positions[1].trim().toInt()
+
+            if (board[x - 1][y - 1] != "") {
+                println("That position is already taken, please try again")
+            } else {
+                board[x - 1][y - 1] = "X"
+                printBoard()
+            }
+
+        } catch (e: Exception) {
+            println("Invalid input, please try again")
+        }
+    } while (continueGame)
 }
 
 fun printBoard() {
