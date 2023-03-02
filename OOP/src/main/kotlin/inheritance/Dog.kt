@@ -10,6 +10,7 @@ fun main() {
 }
 
 open class Dog {
+
     var size = 0
 
     fun bark() {
