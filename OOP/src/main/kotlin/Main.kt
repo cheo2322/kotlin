@@ -1,14 +1,7 @@
 fun main() {
 
-    val myCar = Car()
-    val yourCar = Car()
-
-    myCar.model = "BMW"
-    yourCar.model = "Toyota"
-
-    myCar.topSeed = 140
-    myCar.start()
-    myCar.drive(50)
+    val myCar = Car("BMW", 140)
+    val yourCar = Car("Toyota", 190)
 
     yourCar.start()
     yourCar.drive(60)
@@ -30,8 +23,24 @@ fun main() {
 }
 
 class Car {
+
     var model: String? = null
-    var topSeed = 100
+    var topSpeed = 100
+
+    constructor() {
+        model = "No model"
+        topSpeed = 150
+    }
+
+    constructor(newModel: String) {
+        model = newModel
+        topSpeed = 150
+    }
+
+    constructor(newModel: String, newTopSpeed: Int) {
+        model = newModel
+        topSpeed = newTopSpeed
+    }
 
     fun start() {
         println("Starting the model $model")
