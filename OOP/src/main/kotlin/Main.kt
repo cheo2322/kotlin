@@ -1,9 +1,17 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val myCar = Car()
+    val yourCar = Car()
+
+    myCar.model = "BMW"
+    yourCar.model = "Toyota"
+
+    myCar.topSeed = 140
+    myCar.start()
+    myCar.drive(50)
+
+    yourCar.start()
+    yourCar.drive(60)
 }
 
 class Car {
