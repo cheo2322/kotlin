@@ -33,8 +33,12 @@ fun main() {
 
 class Car {
 
-    var model: String? = null
+    var model: String? = "model"
     var topSpeed = 100
+
+    init {
+        println("Model $model top speed $topSpeed")
+    }
 
     constructor() {
         model = "No model"
