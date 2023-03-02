@@ -3,6 +3,9 @@ fun main() {
     val myCar = Car("BMW", 140)
     val yourCar = Car("Toyota", 190)
 
+    myCar.start()
+    myCar.drive(50)
+
     yourCar.start()
     yourCar.drive(60)
 
@@ -20,6 +23,12 @@ fun main() {
     }
 
     println("Database is connected: ${DatabaseAccess.connected}")
+
+    val anotherCar = AnotherCar()
+    anotherCar.speed = 100
+
+    println("car.name ${anotherCar.name}")
+    println("car.speed ${anotherCar.speed}")
 }
 
 class Car {
@@ -49,6 +58,15 @@ class Car {
     fun drive(speed: Int) {
         println("Driving at a speed to $speed")
     }
+}
+
+class AnotherCar {
+    var name = ""
+    var speed: Int = 0
+        set(value) {
+            name = "High speed car $value"
+            field = value
+        }
 }
 
 class Math {
