@@ -8,7 +8,7 @@ import javafx.stage.Stage
 class HelloApplication : Application() {
   override fun start(stage: Stage) {
     val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
-    val scene = Scene(fxmlLoader.load(), 400.0, 600.0)
+    val scene = Scene(fxmlLoader.load())
     stage.title = "Calculator"
     stage.scene = scene
     stage.show()
