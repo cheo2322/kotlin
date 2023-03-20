@@ -1,19 +1,11 @@
 {
     "logs": [
         {
-            "outputFile": "com.devtides.imageprocessingcoroutines.app-mergeDebugResources-7:/values-v28/values-v28.xml",
+            "outputFile": "com.devtides.imageprocessingcoroutines.app-mergeDebugResources-20:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Cheo\\.gradle\\caches\\transforms-3\\3dc71a47b9da478b51700829756715ab\\transformed\\appcompat-1.1.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Cheo\\.gradle\\caches\\transforms-3\\ced37a9efa49c483c560b6aab1062e84\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
                     "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,447",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,442,684"
-                    },
-                    "to": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,130,217,397",

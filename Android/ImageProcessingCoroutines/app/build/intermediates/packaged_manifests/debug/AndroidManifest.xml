@@ -6,9 +6,15 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="29" />
+        android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.devtides.imageprocessingcoroutines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.devtides.imageprocessingcoroutines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -20,13 +26,27 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.devtides.imageprocessingcoroutines.MainActivity" >
+        <activity
+            android:name="com.devtides.imageprocessingcoroutines.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.devtides.imageprocessingcoroutines.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

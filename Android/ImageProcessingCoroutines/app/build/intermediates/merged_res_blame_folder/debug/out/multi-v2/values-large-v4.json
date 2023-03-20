@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.devtides.imageprocessingcoroutines.app-mergeDebugResources-7:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.devtides.imageprocessingcoroutines.app-mergeDebugResources-20:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Cheo\\.gradle\\caches\\transforms-3\\3dc71a47b9da478b51700829756715ab\\transformed\\appcompat-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Cheo\\.gradle\\caches\\transforms-3\\ced37a9efa49c483c560b6aab1062e84\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

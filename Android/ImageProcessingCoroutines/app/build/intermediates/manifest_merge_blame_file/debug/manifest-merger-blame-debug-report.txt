@@ -7,45 +7,81 @@
 7    <uses-sdk
 8        android:minSdkVersion="16"
 8-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="29" />
+9        android:targetSdkVersion="33" />
 9-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:4:5-67
 11-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:4:22-64
 12
-13    <application
-13-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:6:5-20:19
-14        android:allowBackup="true"
-14-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:7:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.1.0] C:\Users\Cheo\.gradle\caches\transforms-3\090649b1f0e1ef6c9b839a6cd0133f13\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
-16        android:debuggable="true"
-17        android:icon="@mipmap/ic_launcher"
-17-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:8:9-43
-18        android:label="@string/app_name"
-18-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:9:9-41
-19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:10:9-54
-20        android:supportsRtl="true"
-20-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:11:9-35
-21        android:testOnly="true"
-22        android:theme="@style/AppTheme" >
-22-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:12:9-40
-23        <activity android:name="com.devtides.imageprocessingcoroutines.MainActivity" >
-23-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:13:9-19:20
-23-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:13:19-47
-24            <intent-filter>
-24-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:14:13-18:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:15:17-69
-25-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:15:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:17:17-77
-27-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:17:27-74
-28            </intent-filter>
-29        </activity>
-30    </application>
-31
-32</manifest>
+13    <permission
+13-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.devtides.imageprocessingcoroutines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.devtides.imageprocessingcoroutines.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:6:5-21:19
+20        android:allowBackup="true"
+20-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:7:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0] C:\Users\Cheo\.gradle\caches\transforms-3\2a40c978216a6213b76dded601643925\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:8:9-43
+24        android:label="@string/app_name"
+24-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:9:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:10:9-54
+26        android:supportsRtl="true"
+26-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:11:9-35
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme" >
+28-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:12:9-40
+29        <activity
+29-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:13:9-20:20
+30            android:name="com.devtides.imageprocessingcoroutines.MainActivity"
+30-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:13:19-47
+31            android:exported="true" >
+31-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:14:13-36
+32            <intent-filter>
+32-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:15:13-19:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:16:17-69
+33-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:16:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:18:17-77
+35-->D:\Projects\kotlin\Android\ImageProcessingCoroutines\app\src\main\AndroidManifest.xml:18:27-74
+36            </intent-filter>
+37        </activity>
+38
+39        <provider
+39-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+40            android:name="androidx.startup.InitializationProvider"
+40-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+41            android:authorities="com.devtides.imageprocessingcoroutines.androidx-startup"
+41-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+42            android:exported="false" >
+42-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+43            <meta-data
+43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+45                android:value="androidx.startup" />
+45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Cheo\.gradle\caches\transforms-3\574736dfef4e99eb74af8e0d77528e74\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+46            <meta-data
+46-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Cheo\.gradle\caches\transforms-3\195605866076f497d2ac3adeddcfd557\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+47-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Cheo\.gradle\caches\transforms-3\195605866076f497d2ac3adeddcfd557\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+48                android:value="androidx.startup" />
+48-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Cheo\.gradle\caches\transforms-3\195605866076f497d2ac3adeddcfd557\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+49        </provider>
+50    </application>
+51
+52</manifest>
