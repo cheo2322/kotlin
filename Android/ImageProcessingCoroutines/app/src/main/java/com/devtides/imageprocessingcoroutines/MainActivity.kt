@@ -27,10 +27,14 @@ class MainActivity : AppCompatActivity() {
             val originalDeferred = coroutineScope.async(Dispatchers.IO) {
                 getOriginalBitmap()
             }
+            val originalBitMap = originalDeferred.await()
 
-            val originalBitMap =originalDeferred.await()
+            val filterDeferred = coroutineScope.async(Dispatchers.Default) {
+                applyFilter(originalBitMap)
+            }
+            val filteredBitmap = filterDeferred.await()
 
-            loadImage(originalBitMap)
+            loadImage(filteredBitmap)
         }
     }
 
@@ -47,4 +51,6 @@ class MainActivity : AppCompatActivity() {
         imageView.setImageBitmap(bmp)
         imageView.visibility = View.VISIBLE
     }
+
+    private fun applyFilter(originalBitmap: Bitmap) = Filter.apply(originalBitmap)
 }
